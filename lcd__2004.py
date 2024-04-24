@@ -1,3 +1,23 @@
+'''
+main.py Example:
+
+import lcd_2004
+from time import sleep
+
+#Usage: lcd_2004(Device Address, SCL PIN, SDA PIN)
+
+lcd=lcd_2004.lcd(0x27,7,6) #Change to match your device (Address, SCL Pin, SDA Pin)
+while True:
+    lcd.lcd_clear()
+    lcd.lcd_backlight(True)
+    lcd.lcd_print("Sticchio",3,6)
+    sleep(0.5)
+    lcd.lcd_backlight(False)
+    sleep(0.5)
+    
+'''
+
+
 import machine
 from time import sleep_ms
 
